@@ -6,7 +6,7 @@ probabilistic forecasts of weekly state hospital admissions (CDC NHSN) for
 **influenza, RSV and COVID-19** across US states, 2024–2026.
 
 **Author:** Bernard Frimpong  
-**Status:** in progress — data download stage (Week 2 of 8)
+**Status:** in progress — data preparation stage (Week 2 of 8)
 
 ## Research question
 
@@ -38,9 +38,12 @@ date, which prevents information from the future leaking into the results.
 scripts/
   01_download_data.py    download all data into data/raw/ (resumable)
   02_check_coverage.py   inclusion check: which states have enough wastewater
+  03_build_wastewater.py weekly state wastewater values as known on each
+                         Friday forecast date; reporting delays; revisions
 data/                    created by the scripts; not tracked by git
   raw/                   monthly compressed CSV downloads
   summary/               coverage tables
+  processed/             cleaned inputs for the forecasting models
 ```
 
 ## How to run
@@ -62,6 +65,7 @@ Requires Python 3.9 or newer (developed on Python 3.13, Windows).
    ```
    python scripts/01_download_data.py
    python scripts/02_check_coverage.py
+   python scripts/03_build_wastewater.py
    ```
 
 ## Licence and data use
