@@ -1,0 +1,27 @@
+# Python environment (rebuilt with pip, never shared)
+.venv/
+__pycache__/
+*.pyc
+
+# Downloaded and derived data (large; re-created by the scripts)
+data/
+
+# Secrets: never commit API keys or environment files
+.env
+*.key
+
+# Editor and system files
+.vscode/
+.DS_Store
+Thumbs.db
+
+# LaTeX build files (the paper source .tex/.bib IS committed)
+*.aux
+*.log
+*.out
+*.toc
+*.bbl
+*.blg
+*.synctex.gz
+*.fls
+*.fdb_latexmk
