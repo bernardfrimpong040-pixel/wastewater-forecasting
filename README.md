@@ -40,6 +40,8 @@ scripts/
   02_check_coverage.py   inclusion check: which states have enough wastewater
   03_build_wastewater.py weekly state wastewater values as known on each
                          Friday forecast date; reporting delays; revisions
+  04_build_hospital.py   hospital admission versions, truth data, evaluation
+                         window, epidemic phases and turning points
 data/                    created by the scripts; not tracked by git
   raw/                   monthly compressed CSV downloads
   summary/               coverage tables
@@ -66,6 +68,7 @@ Requires Python 3.9 or newer (developed on Python 3.13, Windows).
    python scripts/01_download_data.py
    python scripts/02_check_coverage.py
    python scripts/03_build_wastewater.py
+   python scripts/04_build_hospital.py
    ```
 
 ## Licence and data use
